@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>COLOR CULT</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="animate.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="player.css">
+
+
+  <!-- Favicon–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="img/favicon.ico">
+
+  <script src="https://kit.fontawesome.com/a062562745.js" crossorigin="anonymous"></script>
+
+
+     <!-- Smooth Scroll ––––––––––––––––––––––––––––––––––––––––––––––––––-->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+	$(function() {
+	  $('a[href*=#]:not([href=#])').click(function() {
+	    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+
+	      var target = $(this.hash);
+	      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+	      if (target.length) {
+	        $('html,body').animate({
+	          scrollTop: target.offset().top
+	        }, 1000);
+	        return false;
+	      }
+	    }
+	  });
+	});
+	</script>
+ <!-- SMOOTH SCROLL -->
+
+</head>
+<body>
+    <nav>
+        <a href="#latest">Latest Release</a>
+        <a href="#all">All Music</a>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#help">Help Me Out</a>
+    </nav>
+    <header id="home" class="animated one fadeIn">
+    </header>
+    <section id="neweset-advertise" class="animated two fadeIn">
+        <img src="/img/Planet_Nowhere_Animated.gif">
+        <div>
+            <h2>Planet Nowhere EP - Out Now</h2>
+            <p>All Trash Welcome Here</p>
+        </div>
+    </section>
+    <section id="music" class="animated one fadeIn">
+        <button class="green"><a href="#latest">LATEST RELEASE</a></button>
+        <img src="/img/logo.png">
+        <button class="purple"><a href="#all">ALL MUSIC</a></button>
+    </section>
+    <div id="body">
+        <div id="colorful">
+            <img src="/img/colorful.png">
+            <img src="/img/green-purple-h.png">
+        </div>
+
+        <a id="latest"></a>
+        <section id="latest-wrap">
+            <div id="album-img"><img src="/img/Planet_Nowhere_Cover_Final.png" class="album-img"></div>
+            <div class="album-details">
+                <p>Planet Nowhere EP</p>
+                <p>COLORCULT</p>
+                <p><a href="" class="green"><img src="/img/download.png">Download</a></p>
+                <p><a href="" class="green"><img src="/img/share.png">Share</a></p>
+                <p class="sm">Electronic EP released summer of 2017, focusing on controversial politics and American culture</p>
+            </div>
+            <audio id="myAudio" ontimeupdate="onTimeUpdate()">
+              <!-- <source src="audio.ogg" type="audio/ogg"> -->
+              <source id="source-audio" src="/music/Planet_Nowhere/Gamma_Gamma.mp3" type="audio/mpeg">
+              Your browser does not support the audio element.
+            </audio>
+
+            <div class="player">
+                <div class="player-ctn">
+                  <div class="infos-ctn">
+                    <div class="timer">00:00</div>
+                    <div class="title"></div>
+                    <div class="duration">00:00</div>
+                  </div>
+                  <div class="btn-ctn">
+                     <div class="btn-action first-btn" onclick="previous()">
+                        <div id="btn-faws-back">
+                          <i class='fas fa-step-backward'></i>
+                        </div>
+                     </div>
+                     <div class="btn-action" onclick="toggleAudio()">
+                        <div id="btn-faws-play-pause">
+                          <i class='fas fa-play' id="icon-play"></i>
+                          <i class='fas fa-pause' id="icon-pause" style="display: none"></i>
+                        </div>
+                     </div>
+                     <div class="btn-action" onclick="next()">
+                        <div id="btn-faws-next">
+                          <i class='fas fa-step-forward'></i>
+                        </div>
+                     </div>
+                     <div class="btn-mute" id="toggleMute" onclick="toggleMute()">
+                        <div id="btn-faws-volume">
+                          <i id="icon-vol-up" class='fas fa-volume-up'></i>
+                          <i id="icon-vol-mute" class='fas fa-volume-mute' style="display: none"></i>
+                        </div>
+                     </div>
+                  </div>
+                  <div id="myProgress">
+                    <div id="myBar"></div>
+                  </div>
+                  <div class="playlist-ctn"></div>
+                </div>
+            </div>
+        </section>
+
+        <img src="/img/green-red-h.png">
+
+        <a id="all"></a>
+        <section id="all-wrap">
+            <h1>All Music</h1>
+            <img src="/img/Planet_Nowhere_Cover_Final.png" id="PN-Album">
+            <img src="/img/taxidermy.png" id="Taxidermy-Album">
+        </section>
+
+        <img src="/img/green-purple-h.png">
+        <a id="about"></a>
+        <section id="about-wrap">
+            <h1>About</h1>
+            <div id="about-content">
+                <img src="/img/logo.png">
+                <p class="purple">ARTIST DESCRIPTION GOES HERE
+                    ARTIST DESCRIPTION GOES HERE
+                    ARTIST DESCRIPTION GOES HERE
+                    ARTIST DESCRIPTION GOES HERE
+                    ARTIST DESCRIPTION GOES HERE
+                    ARTIST DESCRIPTION GOES HERE
+                </p>
+            </div>
+        </section>
+
+        <a id="help"></a>
+        <section id="help-contact-wrap">
+            <div id="help-wrap">
+                <h2>Help Me Out</h2>
+                <a href="paypal.com" class="green">Paypal</a>
+                <a href="" class="green">Feedback</a>
+            </div>
+            <img src="/img/green-red-v.png">
+            <div id="contact-wrap">
+                <h2>Get In Touch</h2>
+                <form>
+                    <div id="name-wrap"><label>Name</label><input type="text" id="name"></div>
+                    <div id="email-wrap"><label>Email</label><input type="email" id="email"></div>
+                    <div id="message-wrap"><label>Message</label><textarea id="message"></textarea></div>
+                    <input type="submit" value="SEND">
+                </form>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <div id="footer-images">
+            <a href="http://www.facebook.com" class="footer-link" target="_blank"><img src="/img/fb.png" class="footer-img"></a>
+            <a href="http://www.instagram.com" class="footer-link" target="_blank"><img src="/img/insta.png" class="footer-img"></a>
+            <a href="http://www.youtube.com" class="footer-link" target="_blank"><img src="/img/yt.png" class="footer-img"></a>
+        </div>
+        <a href="mailto:contact@colorcult.band">CONTACT@COLORCULT.BAND</a>
+        <p class="red">&copy; COLORCULT 2020</p>
+        <p class="purple">Web Design & Development by <a href="http://www.ghostdesigns.me" target="_blank">ghostdesigns.me</a></p>
+    </footer>
+</body>
+<script src=app.js></script>
+<script>
+    $('#PN-Album').click(function(){
+        $('.playlist-ctn').empty();
+        listAudio = [
+         {
+           name:"Gamma Gamma",
+           file:"music/Planet_Nowhere/Gamma_Gamma.mp3",
+           duration:"01:58"
+         },
+         {
+           name:"Doom",
+           file:"music/Planet_Nowhere/Doom.mp3",
+           duration:"03:17"
+         },
+         {
+           name:"Aliens",
+           file:"music/Planet_Nowhere/Aliens.mp3",
+           duration:"01:58"
+         },
+         {
+           name:"Woke And Terrified",
+           file:"music/Planet_Nowhere/Woke_And_Terrified.mp3",
+           duration:"03:23"
+         }
+       ]
+
+       for (var i = 0; i < listAudio.length; i++) {
+           createTrackItem(i,listAudio[i].name,listAudio[i].duration);
+       }
+       indexAudio = 0;
+
+       playListItems = document.querySelectorAll(".playlist-track-ctn");
+
+       for (let i = 0; i < playListItems.length; i++){
+         playListItems[i].addEventListener("click", getClickedElement.bind(this));
+       }
+       loadNewTrack(0);
+       toggleAudio();
+
+       document.getElementById('album-img').innerHTML = "<img src='/img/Planet_Nowhere_Cover_Final.png' class='album-img'>"
+       $('.album-details').html("<p>Planet Nowhere EP</p>"+
+       "<p>COLORCULT</p>"+
+       "<p><a href='' class='green'><img src='/img/download.png'>Download</a></p>"+
+       "<p><a href='' class='green'><img src='/img/share.png'>Share</a></p>"+
+       "<p class='sm'>Electronic EP released summer of 2017, focusing on controversial politics and American culture</p>");
+       var target = $('#latest');
+       target = target.length ? target : $('[name=latest]');
+       if (target.length) {
+         $('html,body').animate({
+           scrollTop: target.offset().top
+         }, 1000);
+         return false;
+       }
+    });
+
+
+    $('#Taxidermy-Album').click(function(){
+        $('.playlist-ctn').empty();
+        listAudio = [
+         {
+           name:"BABY LOBOTOMY",
+           file:"music/TAXIDERMY/BABY_LOBOTOMY.mp3",
+           duration:"03:37"
+         },
+         {
+           name:"REAL MEN LIE",
+           file:"music/TAXIDERMY/REAL_MEN_LIE.mp3",
+           duration:"03:47"
+         },
+         {
+           name:"FKD",
+           file:"music/TAXIDERMY/FKD.mp3",
+           duration:"03:31"
+         },
+         {
+           name:"CATATONIC",
+           file:"music/Planet_Nowhere/Aliens.mp3",
+           duration:"01:58"
+         },
+         {
+           name:"IS ANYBODY HOME",
+           file:"music/TAXIDERMY/IS_ANYBODY_HOME.mp3",
+           duration:"02:53"
+         },
+         {
+           name:"SHITHOLES",
+           file:"music/TAXIDERMY/SHITHOLES.mp3",
+           duration:"01:11"
+         }
+       ]
+
+       for (var i = 0; i < listAudio.length; i++) {
+           createTrackItem(i,listAudio[i].name,listAudio[i].duration);
+       }
+       indexAudio = 0;
+       playListItems = document.querySelectorAll(".playlist-track-ctn");
+
+       for (let i = 0; i < playListItems.length; i++){
+         playListItems[i].addEventListener("click", getClickedElement.bind(this));
+       }
+
+       loadNewTrack(0);
+       toggleAudio();
+       document.getElementById('album-img').innerHTML = "<img src='/img/taxidermy.png' class='album-img'>"
+       $('.album-details').html("<p>TAXIDERMY EP</p>"+
+       "<p>COLORCULT</p>"+
+       "<p><a href='' class='green'><img src='/img/download.png'>Download</a></p>"+
+       "<p><a href='' class='green'><img src='/img/share.png'>Share</a></p>"+
+       "<p class='sm'>To be released 2021. Stay tuned.</p>");
+       var target = $('#latest');
+       target = target.length ? target : $('[name=latest]');
+       if (target.length) {
+         $('html,body').animate({
+           scrollTop: target.offset().top
+         }, 1000);
+         return false;
+       }
+    });
+
+</script>
+</html>
