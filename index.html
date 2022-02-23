@@ -58,7 +58,7 @@
     <header id="home" class="animated one fadeIn">
     </header>
     <section id="neweset-advertise" class="animated two fadeIn">
-        <img src="/img/Planet_Nowhere_Animated.gif">
+        <img src="./img/Planet_Nowhere_Animated.gif">
         <div>
             <h2>Planet Nowhere EP - Out Now</h2>
             <p>All Trash Welcome Here</p>
@@ -66,28 +66,28 @@
     </section>
     <section id="music" class="animated one fadeIn">
         <button class="green"><a href="#latest">LATEST RELEASE</a></button>
-        <img src="/img/logo.png">
+        <img src="./img/logo.png">
         <button class="purple"><a href="#all">ALL MUSIC</a></button>
     </section>
     <div id="body">
         <div id="colorful">
-            <img src="/img/colorful.png">
-            <img src="/img/green-purple-h.png">
+            <img src="./img/colorful.png">
+            <img src="./img/green-purple-h.png">
         </div>
 
         <a id="latest"></a>
         <section id="latest-wrap">
-            <div id="album-img"><img src="/img/Planet_Nowhere_Cover_Final.png" class="album-img"></div>
+            <div id="album-img"><img src="./img/Planet_Nowhere_Cover_Final.png" class="album-img"></div>
             <div class="album-details">
                 <p>Planet Nowhere EP</p>
                 <p>COLORCULT</p>
-                <p><a href="" class="green"><img src="/img/download.png">Download</a></p>
-                <p><a href="" class="green"><img src="/img/share.png">Share</a></p>
+                <p><a href="#" class="green"><img src="./img/download.png">Download</a></p>
+                <p><a href="#" class="green"><img src="./img/share.png">Share</a></p>
                 <p class="sm">Electronic EP released summer of 2017, focusing on controversial politics and American culture</p>
             </div>
             <audio id="myAudio" ontimeupdate="onTimeUpdate()">
               <!-- <source src="audio.ogg" type="audio/ogg"> -->
-              <source id="source-audio" src="/music/Planet_Nowhere/Gamma_Gamma.mp3" type="audio/mpeg">
+              <source id="source-audio" src="./music/Planet_Nowhere/Gamma_Gamma.mp3" type="audio/mpeg">
               Your browser does not support the audio element.
             </audio>
 
@@ -130,21 +130,21 @@
             </div>
         </section>
 
-        <img src="/img/green-red-h.png">
+        <img src="./img/green-red-h.png">
 
         <a id="all"></a>
         <section id="all-wrap">
             <h1>All Music</h1>
-            <img src="/img/Planet_Nowhere_Cover_Final.png" id="PN-Album">
-            <img src="/img/taxidermy.png" id="Taxidermy-Album">
+            <img src="./img/Planet_Nowhere_Cover_Final.png" id="PN-Album">
+            <img src="./img/taxidermy.png" id="Taxidermy-Album">
         </section>
 
-        <img src="/img/green-purple-h.png">
+        <img src="./img/green-purple-h.png">
         <a id="about"></a>
         <section id="about-wrap">
             <h1>About</h1>
             <div id="about-content">
-                <img src="/img/logo.png">
+                <img src="./img/logo.png">
                 <p class="purple">ARTIST DESCRIPTION GOES HERE
                     ARTIST DESCRIPTION GOES HERE
                     ARTIST DESCRIPTION GOES HERE
@@ -159,10 +159,10 @@
         <section id="help-contact-wrap">
             <div id="help-wrap">
                 <h2>Help Me Out</h2>
-                <a href="paypal.com" class="green">Paypal</a>
-                <a href="" class="green">Feedback</a>
+                <a href="http://www.paypal.com" class="green">Paypal</a>
+                <a href="#" class="green">Feedback</a>
             </div>
-            <img src="/img/green-red-v.png">
+            <img src="./img/green-red-v.png">
             <div id="contact-wrap">
                 <h2>Get In Touch</h2>
                 <form>
@@ -176,9 +176,9 @@
     </div>
     <footer>
         <div id="footer-images">
-            <a href="http://www.facebook.com" class="footer-link" target="_blank"><img src="/img/fb.png" class="footer-img"></a>
-            <a href="http://www.instagram.com" class="footer-link" target="_blank"><img src="/img/insta.png" class="footer-img"></a>
-            <a href="http://www.youtube.com" class="footer-link" target="_blank"><img src="/img/yt.png" class="footer-img"></a>
+            <a href="http://www.facebook.com" class="footer-link" target="_blank"><img src="./img/fb.png" class="footer-img"></a>
+            <a href="http://www.instagram.com" class="footer-link" target="_blank"><img src="./img/insta.png" class="footer-img"></a>
+            <a href="http://www.youtube.com" class="footer-link" target="_blank"><img src="./img/yt.png" class="footer-img"></a>
         </div>
         <a href="mailto:contact@colorcult.band">CONTACT@COLORCULT.BAND</a>
         <p class="red">&copy; COLORCULT 2020</p>
@@ -225,11 +225,11 @@
        loadNewTrack(0);
        toggleAudio();
 
-       document.getElementById('album-img').innerHTML = "<img src='/img/Planet_Nowhere_Cover_Final.png' class='album-img'>"
+       document.getElementById('album-img').innerHTML = "<img src='./img/Planet_Nowhere_Cover_Final.png' class='album-img'>"
        $('.album-details').html("<p>Planet Nowhere EP</p>"+
        "<p>COLORCULT</p>"+
-       "<p><a href='' class='green'><img src='/img/download.png'>Download</a></p>"+
-       "<p><a href='' class='green'><img src='/img/share.png'>Share</a></p>"+
+       "<p><a href='#' class='green'><img src='./img/download.png'>Download</a></p>"+
+       "<p><a href='#' class='green'><img src='./img/share.png'>Share</a></p>"+
        "<p class='sm'>Electronic EP released summer of 2017, focusing on controversial politics and American culture</p>");
        var target = $('#latest');
        target = target.length ? target : $('[name=latest]');
@@ -292,8 +292,8 @@
        document.getElementById('album-img').innerHTML = "<img src='/img/taxidermy.png' class='album-img'>"
        $('.album-details').html("<p>TAXIDERMY EP</p>"+
        "<p>COLORCULT</p>"+
-       "<p><a href='' class='green'><img src='/img/download.png'>Download</a></p>"+
-       "<p><a href='' class='green'><img src='/img/share.png'>Share</a></p>"+
+       "<p><a href='#' class='green'><img src='/img/download.png'>Download</a></p>"+
+       "<p><a href='#' class='green'><img src='/img/share.png'>Share</a></p>"+
        "<p class='sm'>To be released 2021. Stay tuned.</p>");
        var target = $('#latest');
        target = target.length ? target : $('[name=latest]');

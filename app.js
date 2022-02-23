@@ -109,6 +109,7 @@ function toggleAudio() {
     document.querySelector('#ptc-'+this.indexAudio).classList.add("active-track");
     this.playToPause(this.indexAudio)
     this.currentAudio.play();
+    this.currentAudio.volume = 0.1;
   }else{
     document.querySelector('#icon-play').style.display = 'block';
     document.querySelector('#icon-pause').style.display = 'none';
